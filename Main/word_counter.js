@@ -3,8 +3,8 @@ const motivationInput = document.getElementById('motivation');
 const wordCount1Span = document.getElementById('wordCount1');
 const wordCount2Span = document.getElementById('wordCount2');
 
-const MAX_WORDS1 = 300;
-const MAX_WORDS2 = 150;
+const MAX_WORDS1 = 3;
+const MAX_WORDS2 = 1;
 
 function updateWordCount(input, wordCountSpan, maxWords) {
     const wordCount = input.value.trim().split(/\s+/).filter(word => word.length > 0).length;
