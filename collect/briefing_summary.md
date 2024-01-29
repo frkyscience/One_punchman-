@@ -58,7 +58,7 @@ Heroes will be matched for duels based on their ELO ratings to ensure fair compe
 The digital system must provide real-time updates to a hero’s ELO rating and duel history
 
 
- ## Public Interface and Leaderboard
+## Public Interface and Leaderboard
 The public’s gaze is ever upon our heroes, and thus, a public interface is essential. It must be:
 
 Visible and Accessible: To allow the citizens to witness the valor of their champions.
