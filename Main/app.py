@@ -12,6 +12,9 @@ db.init_app(app15)
 with app15.app_context():
     db.create_all()
 
+
+app15.route()
+
 @app15.route('/create')
 def create():
     return render_template('createhero.html')
