@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Elo System</title>
     <link rel="stylesheet" href="leaderboard.css">
+    <script src="leaderboard.js"></script>
 </head>
 <body>
     <div class="leaderboard">
@@ -12,7 +13,7 @@
         <div class="description">
             <h3>Hero Association sign-up</h3>
             <p>Date 02/24/2024</p>
-            <input type="search" placeholder="Search" id="search">
+            <input type="search" placeholder="Search" id="search" oninput="search()">
             <table>
                 <thead>
                     <tr>
@@ -38,21 +39,21 @@
 
                     <tr>
                         <td id="runner-up">2</td>
-                        <td>hero 2</td>
+                        <td><p>hero 2</p></td>
                         <td>1430</td>
                         <td>B-rank</td>
                     </tr>
 
                     <tr>
                         <td id="runner-up2">3</td>
-                        <td>hero 3</td>
+                        <td><p>hero 3</p></td>
                         <td>1232</td>
                         <td>C-rank</td>
                     </tr>
 
                     <tr>
                         <td id="runner-up3">4</td>
-                        <td>hero 4</td>
+                        <td><p>hero 4</p></td>
                         <td>1200</td>
                         <td>C-rank</td>
                     </tr>
