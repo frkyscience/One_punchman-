@@ -10,3 +10,6 @@ inputField.addEventListener('input', updateWordCount);
 
 updateWordCount();
 
+//    <h2>Word Counter</h2>
+//<textarea id="inputField" rows="4" cols="50"></textarea>
+//<p>Word Count: <span id="wordCount">0</span></p>
