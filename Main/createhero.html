@@ -1,22 +1,33 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
+    <script src="word_counter.js" defer></script>
+    <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
-    <form method="post" action="{{ url_for('create_hereo') }}">
-        <label for="email">Email:</label>
-        <input type="email" id="email" name="email" required>
-        <label for="name">Legal name:</label>
-        <input type="text" id="name" name="name" required>
-        <label for="alias">Alias name:</label>
-        <input type="text" id="alias" name="alias" required>
-        <label for="backround-story">Backround Story:</label>
-        <input type="textarea" id="backround-story" name="back-story" maxlength="500" required>
-        <label for="motivation">Motivation for hereoisme:</label>
-        <input type="textarea" id="motivation" name="motivation" maxlength="500" required>
-        <button type="submit"></button>
-    </form>
+    <div class="login">
+        <form method="post" action="{{ url_for('create_hereo') }}">
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+            <label for="name">Legal name:</label>
+            <input type="text" id="name" name="name" required>
+            <label for="alias">Alias name:</label>
+            <input type="text" id="alias" name="alias" required>
+
+            <label for="background-story">Background Story:</label>
+            <textarea id="background-story" name="background-story" maxlength="500" required></textarea>
+            <span id="wordCount1">0</span>
+
+            <label for="motivation">Motivation for Heroism:</label>
+            <textarea id="motivation" name="motivation" maxlength="500" required></textarea>
+            <span id="wordCount2">0</span>
+            <button type="submit"></button>
+        </form>
+    </div>
 </body>
+
 </html>

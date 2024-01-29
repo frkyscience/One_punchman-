@@ -1,15 +1,26 @@
-const inputField = document.getElementById('inputField');
-const wordCountSpan = document.getElementById('wordCount');
+const backgroundStoryInput = document.getElementById('background-story');
+const motivationInput = document.getElementById('motivation');
+const wordCount1Span = document.getElementById('wordCount1');
+const wordCount2Span = document.getElementById('wordCount2');
 
-function updateWordCount() {
-    const inputText = inputField.value.trim();
-    const wordCount = inputText.split(/\s+/).filter(word => word.length > 0).length;
+const MAX_WORDS1 = 3;
+const MAX_WORDS2 = 1;
+
+function updateWordCount(input, wordCountSpan, maxWords) {
+    const wordCount = input.value.trim().split(/\s+/).filter(word => word.length > 0).length;
     wordCountSpan.textContent = wordCount;
+
+    if (wordCount > maxWords) {
+        input.classList.add('exceed-max-words');
+    } else {
+        input.classList.remove('exceed-max-words');
+    }
 }
-inputField.addEventListener('input', updateWordCount);
 
-updateWordCount();
+backgroundStoryInput.addEventListener('input', function () {
+    updateWordCount(backgroundStoryInput, wordCount1Span, MAX_WORDS1);
+});
 
-//    <h2>Word Counter</h2>
-//<textarea id="inputField" rows="4" cols="50"></textarea>
-//<p>Word Count: <span id="wordCount">0</span></p>
+motivationInput.addEventListener('input', function () {
+    updateWordCount(motivationInput, wordCount2Span, MAX_WORDS2);
+});
