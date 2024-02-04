@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title></title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/stats2.css') }}">
+</head>
+<body>
+  <video id="background-video" autoplay loop muted poster="https://th.bing.com/th/id/R.790bfe7d69c8e12b59183619d1f94440?rik=h3Qa90Q7glmvzg&pid=ImgRaw&r=0">
+    <source src="https://th.bing.com/th/id/R.790bfe7d69c8e12b59183619d1f94440?rik=h3Qa90Q7glmvzg&pid=ImgRaw&r=0">
+  </video>  
+
+       <div class="app-navbar">
+        <div class="app-body">
+          <div class="app-body-navigation">
+            <nav>
+              <ul class="menu">
+                <li><a href="/">Home</a></li>
+                <li><a href="/leaderboard_fan">Leaderboard public</a></li>
+                <li><a href="/achievements">Awards</a></li>
+                <li><a href="/create">Register</a></li>
+              </ul>
+            </nav>
+          </div>
+        </div>
+      </div>
+
+
+  <div class="container" id="container">
+    <div class="content">
+      <div class="heads">
+        <div class="head">
+          <p>Character</p>
+          <h1>{{ user.alias }}</h1>
+            <img src="data:image/png;base64,{{ user.image }}" alt="profile-picture" style="width: 80px; height: 80px">
+
+        </div>
+  
+        <div class="head">
+          <h1>Motivation</h1>
+          <p>{{ user.motivation }}</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="tiles">
+    <article class="tile">
+      <div class="tile-header">
+        <h3>
+          <span>RANK</span>
+            <br>
+          <span>{{ user.rank }}</span>
+        </h3>
+      </div>
+    </article>
+
+    <article class="tile">
+      <div class="tile-header">
+        <i class="ph-fire-simple-light"></i>
+        <h3>
+          <span>ELO</span>
+            <br>
+          <span>{{ user.eol }}</span>
+        </h3>
+      </div>
+    </article>
+
+    <article class="tile">
+      <div class="tile-header">
+        <i class="ph-file-light"></i>
+        <h3>
+          <span>WINS:</span>
+            <br>
+          <span>{{ user.WINS }}</span>
+        </h3>
+      </div>
+    </article>
+  </div>
+
+  <div class="titles">
+    <article class="tile-below">
+      <div class="tile-header">
+        <h3>
+          <span>{{ user.story }}</span>
+        </h3>
+      </div>
+    </article>
+  </div>
+  </div>
+</body>
+</html>

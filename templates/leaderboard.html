@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Elo System</title>
+    <script src='https://unpkg.com/feather-icons'></script>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/leaderboard.css') }}">
+    <script src="'{{ url_for('static', filename='js/leaderboard.js') }}'"></script>
+</head>
+
+<body>
+    <video id="background-video" autoplay loop muted poster="https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExaWJvNTU1bHk5a243NXZhYTE4djk5eGJsYWhkbTM3MHlsNXhjcG15YyZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/3ohc1292yKn6Z1saGs/giphy.gif">
+        <source src="https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExaWJvNTU1bHk5a243NXZhYTE4djk5eGJsYWhkbTM3MHlsNXhjcG15YyZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/3ohc1292yKn6Z1saGs/giphy.gif">
+    </video>
+
+       <div class="app-navbar">
+        <div class="app-body">
+          <div class="app-body-navigation">
+            <nav>
+              <ul class="menu">
+                <li><a href="/">Home</a></li>
+                <li><a href="/leaderboard_fan">Leaderboard public</a></li>
+                <li><a href="/achievements">Awards</a></li>
+                <li><a href="/create">Register</a></li>
+              </ul>
+            </nav>
+          </div>
+        </div>
+      </div>
+
+
+<div class="container" id="container">
+    <div class="leaderboard">
+        <div class="description">
+            <h3>Hero Association sign-up</h3>
+            <p>Date 02/24/2024</p>
+            <input type="search" placeholder="Search" id="search" oninput="search()">
+            <table>
+                <thead>
+                    <tr>
+                        <th>heroes</th>
+                        <th>Elo</th>
+                        <th>estimated Rank</th>
+                        <th>Fight</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for hero in hereos %}
+                    <tr>
+                        <td>
+                            <img src="data:image/png;base64,{{ hero.image }}" alt="profile-picture"
+                                style="height: 40px; width: 40px">
+                            {{ hero.alias }}
+                        </td>
+                        <td>{{ hero.eol }}</td>
+                        <td>{{ hero.rank }}</td>
+                        <td>
+                            <form action="{{ url_for('accept') }}" method="post">
+                                <input type="hidden" name="hero_id" value="{{ hero.id }}">
+                                <button type="submit"id="submit">FIGHT</button>
+                            </form>
+                          <form action="{{ url_for('hero_profile') }}" method="post">
+                                <input type="hidden" name="hero_id" value="{{ hero.id }}">
+                                <button type="submit" id="submit1">View Profile</button>
+                            </form>
+                        </td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+</body>
+
+</html>

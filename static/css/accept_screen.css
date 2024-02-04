@@ -1,0 +1,124 @@
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+}
+
+h1 {
+    color: #f54646;
+}
+
+.invitation {
+    background-color: #b7b2b2;
+    border-radius: 8px;
+    padding: 20px;
+    margin: 10px 0;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    max-width: 800px;
+    justify-content: center;
+    align-items: center;
+    height: max-content;
+    max-height: 80%;
+}
+
+.invitation .stats {
+    display: flex;
+}
+
+.accept {
+    display: flex;
+    align-items: center;
+    font-family: inherit;
+    font-weight: 500;
+    font-size: 16px;
+    padding: 0.7em 1.4em 0.7em 1.1em;
+    color: white;
+    background: linear-gradient(0deg, rgba(102, 146, 115, 0.5) 0%, rgba(102, 247, 113, 0.5) 100%);
+    border: none;
+    box-shadow: 0 0.7em 1.5em -0.5em rgba(20, 167, 62, 0.5);
+    letter-spacing: 0.05em;
+    border-radius: 20em;
+    cursor: pointer;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+}
+
+.accept:hover {
+    background: rgba(20, 167, 62, 0.5);
+    box-shadow: 0 0.5em 1.5em -0.5em rgba(20, 167, 62, 0.5);
+}
+
+.decline {
+    display: flex;
+    align-items: center;
+    font-family: inherit;
+    font-weight: 500;
+    font-size: 16px;
+    padding: 0.7em 1.4em 0.7em 1.1em;
+    color: white;
+    background-color: rgba(244, 67, 54, 0.5);
+    border: none;
+    box-shadow: 0 0.7em 1.5em -0.5em rgba(244, 67, 54, 0.5);
+    letter-spacing: 0.05em;
+    border-radius: 20em;
+    cursor: pointer;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+}
+
+.decline:hover {
+    background-color: rgba(211, 47, 47, 0.5);
+    box-shadow: 0 0.5em 1.5em -0.5em rgba(211, 47, 47, 0.5);
+}
+.rules {
+    background-color: #b7b2b2;
+    border-radius: 8px;
+    padding: 20px;
+    margin: 10px 0;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 80%;
+    max-width: 800px;
+    height: max-content;
+    max-height: 80%;
+    font-family: 'Arial', sans-serif;
+}
+
+.rules p {
+    color: #000;
+    margin-bottom: 10px;
+}
+
+.rules p:last-child {
+    margin-bottom: 0;
+}
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+
+.background-image {
+    background-image: url("static/OPM-arena.jpg");
+    background-size: cover;
+    background-position: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0.5;
+    z-index: -1;
+}

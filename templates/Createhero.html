@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="/word_counter.js" defer></script>
+    <script src="{{ url_for('static', filename='js/word_counter.js') }}" defer></script>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/Createhero.css') }}">
+
+</head>
+
+<body>
+
+       <div class="app-navbar">
+        <div class="app-body">
+          <div class="app-body-navigation">
+            <nav>
+              <ul class="menu">
+                <li><a href="/">Home</a></li>
+                <li><a href="/leaderboard_fan">Leaderboard public</a></li>
+                <li><a href="/achievements">Awards</a></li>
+                <li><a href="/create">Register</a></li>
+              </ul>
+            </nav>
+          </div>
+        </div>
+      </div>
+
+
+    <div class="content-wrap">
+        <div class="login">
+            <form method="post" enctype="multipart/form-data" action="{{ url_for('create_hereo') }}">
+
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="name">Legal name:</label>
+                <input type="text" id="name" name="name" required>
+
+                <label for="alias">Alias name:</label>
+                <input type="text" id="alias" name="alias" required>
+
+                <label for="background-story">Background Story:</label>
+                <textarea id="background-story" name="background-story" maxlength="500" required
+                    placeholder="Describe your backstory...."></textarea>
+                <span id="wordCount1">0</span>
+
+
+                <label for="motivation">Motivation for Heroism:</label>
+                <textarea id="motivation" name="motivation" maxlength="500" required
+                    placeholder="Describe your motivation...."></textarea>
+                <span id="wordCount2">0</span>
+
+                <input type="file" name="image">
+                <button type="submit">Create user</button>
+            </form>
+
+            <div class="Terms-container">
+                <div class="Terms">
+
+                    <h2>Hero Association Terms of Service
+
+                        Welcome to the Hero Association! By accessing our services, you agree to abide by the following
+                        terms: </h2>
+
+                    <p> 1 .Eligibility: Membership is open to registered heroes committed to protecting humanity.</p>
+
+                    <p>Code of Conduct: Members must uphold heroism, integrity, and responsibility.</p>
+
+
+                    <p>Termination: Association reserves right to terminate membership for violations.</p>
+
+
+                    Your commitment to these terms ensures the safety and security of all. Thank you for joining the
+                    Hero
+                    Association!</p>
+
+                </div>
+            </div>
+        </div>
+        </div>
+<div>
+</body>
+
+</html>

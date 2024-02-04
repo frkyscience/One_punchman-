@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>voting for hero</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/vote.css') }}">
+    <script src="{{ url_for('static', filename='js/vote.js') }}" defer></script>
+</head>
+<body>
+
+    <div class="app-navbar">
+        <div class="app-body">
+          <div class="app-body-navigation">
+            <nav>
+              <ul class="menu">
+                <li><a href="/">Home</a></li>
+                <li><a href="/leaderboard_fan">Leaderboard public</a></li>
+                <li><a href="/achievements">Awards</a></li>
+                <li><a href="/create">Register</a></li>
+              </ul>
+            </nav>
+          </div>
+        </div>
+      </div>
+
+
+    
+    <div class="leaderboard">
+        <img src="images/OPM-logo.webp" alt="theme-img" class="theme-img">
+        <div class="description">
+            <h3>Hero Association leaderboard voting</h3>
+            <p>Date 02/24/2024</p>
+            <input type="search" placeholder="search" id="search_hero">
+            <input type="number" id="eloFilter" placeholder="search elo">
+            <table id="heroTable">
+                <thead>
+                    <tr>
+                        <th></th>
+                        <th>Heroes</th>
+                        <th>Elo</th>
+                        <th>Estimated Rank</th>
+                        <th>votes</th>
+                        <th>voting</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr id="winner">
+                        <td class="rank">1</td>
+                        <td><p>hero 1</p></td>
+                        <td class="elo">2000</td>
+                        <td>S-rank</td>
+                        <td id="voteCount_1">0</td>
+                        <td><button id="voteButton_1" onclick="vote(1)">Vote</button></td>
+                    </tr>
+                    <tr id="runner-up">
+                        <td class="rank">2</td>
+                        <td><p>hero 2</p></td>
+                        <td class="elo">1935</td>
+                        <td>S-rank</td>
+                        <td id="voteCount_2">0</td>
+                        <td><button id="voteButton_2" onclick="vote(2)">Vote</button></td>
+                    </tr>
+                    
+                    <tr id="runner-up2">
+                        <td class="rank">3</td>
+                        <td><p>hero 3</p></td>
+                        <td class="elo">1785</td>
+                        <td>A-rank</td>
+                        <td id="voteCount_3">0</td>
+                        <td><button id="voteButton_3" onclick="vote(3)">Vote</button></td>
+                    </tr>
+                    
+                    <tr id="runner-up3">
+                        <td class="rank">4</td>
+                        <td><p>hero 4</p></td>
+                        <td class="elo">1679</td>
+                        <td>A-rank</td>
+                        <td id="voteCount_4">0</td>
+                        <td><button id="voteButton_4" onclick="vote(4)">Vote</button></td>
+                    </tr>
+                    
+                    <tr id="runner-up4">
+                        <td class="rank">5</td>
+                        <td><p>hero 5</p></td>
+                        <td class="elo">1600</td>
+                        <td>A-rank</td>
+                        <td id="voteCount_5">0</td>
+                        <td><button id="voteButton_5" onclick="vote(5)">Vote</button></td>
+                    </tr>
+                    
+                    <tr id="runner-up5">
+                        <td class="rank">6</td>
+                        <td><p>hero 6</p></td>
+                        <td class="elo">1567</td>
+                        <td>B-rank</td>
+                        <td id="voteCount_6">0</td>
+                        <td><button id="voteButton_6" onclick="vote(6)">Vote</button></td>
+                    </tr>
+                    
+                    <tr id="runner-up6">
+                        <td class="rank">7</td>
+                        <td><p>hero 7</p></td>
+                        <td class="elo">1500</td>
+                        <td>B-rank</td>
+                        <td id="voteCount_7">0</td>
+                        <td><button id="voteButton_7" onclick="vote(7)">Vote</button></td>
+                    </tr>
+                    
+                    <tr id="runner-up7">
+                        <td class="rank">8</td>
+                        <td><p>hero 8</p></td>
+                        <td class="elo">1397</td>
+                        <td>C-rank</td>
+                        <td id="voteCount_8">0</td>
+                        <td><button id="voteButton_8" onclick="vote(8)">Vote</button></td>
+                    </tr>
+                    
+                    <tr id="runner-up8">
+                        <td class="rank">9</td>
+                        <td><p>hero 9</p></td>
+                        <td class="elo">1250</td>
+                        <td>C-rank</td>
+                        <td id="voteCount_9">0</td>
+                        <td><button id="voteButton_9" onclick="vote(9)">Vote</button></td>
+                    </tr>
+                    
+                    <tr id="runner-up9">
+                        <td class="rank">10</td>
+                        <td><p>hero 10</p></td>
+                        <td class="elo">1200</td>
+                        <td>C-rank</td>
+                        <td id="voteCount_10">0</td>
+                        <td><button id="voteButton_10" onclick="vote(10)">Vote</button></td>
+                    </tr>
+                    
+                </tbody>
+            </table>
+            <div class="feedback-buttons">
+                <a href="report.html"><button id="reportButton" >Report Issue</button></a>
+                <a href="feedback.html"><button id="feedbackButton">Provide Feedback</button></a>
+                <a href="index.html"><button id="LeaderboardButton">Leaderboard</button></a>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

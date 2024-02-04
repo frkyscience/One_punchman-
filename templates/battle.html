@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>fight result</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/battle.css') }}">
+    <script src="{{ url_for('static', filename='js/battle.js') }}" defer></script>
+    <script src="{{ url_for('static', filename='js/ELO_calculator.js') }}" defer></script>
+</head>
+
+<body id="main-content">
+    <div class="loading-screen" style="background-color: black">
+        <img src="https://th.bing.com/th/id/R.0adedc0c36835634a4b5d22da59f20c4?rik=gpZDnm4Yk7qEQQ&riu=http%3a%2f%2fi.imgur.com%2fYqcKMLP.gif&ehk=hO6BUoGAIWDBD1%2fTLIWJDdYIVtWDOlVJlZK8RHu4beY%3d&risl=&pid=ImgRaw&r=0" style="witdh: 100vw; height:100vh">
+    </div>
+
+    <div class="title">
+        <h1>battle report</h1>
+    </div>
+
+    <div class="wrapper">
+
+
+
+        <div class="winner">
+
+            <img src="data:image/png;base64,{{ hero_1.image }}" alt="winner">
+            <p class="name1">{{ hero_1.alias }}</p>
+            <p class="elo_1">{{ hero_1.eol }}</p>
+            <p>&#8595; NEW ELO &#8595;</p>
+            <p class="newelo1"></p>
+
+
+        </div>
+
+        <div class="loser">
+
+            <img src="data:image/png;base64,{{ hero_2.image }}" alt="loser">
+            <p class="name2">{{ hero_2.alias }}</p>
+            <p class="elo_2">{{ hero_2.eol }}</p>
+            <p>&#8595; NEW ELO &#8595;</p>
+            <p class="newelo2"></p>
+        </div>
+
+    </div>
+    <form class="result" action="{{ url_for('get_elo') }}" method="post">
+        <input type="hidden" class="elo-1" name="elo-1" value="">
+        <input type="hidden" class="elo-2" name="elo-2" value="">
+        <input type="hidden" class="name-1" name="name-1" value="">
+        <input type="hidden" class="name-2" name="name-2" value="">
+        <input type="hidden" class="rankwinner" name="winner" value="">
+        <button class="button-continue" type="submit">continue</button>
+    </form>
+</body>
+
+</html>

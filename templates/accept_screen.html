@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/accept_screen.css') }}">
+    <title>Fight Invitations</title>
+</head>
+
+<body>
+    <div class="background-image"></div>
+    <div class="container">
+        <h1>Selected Opponent</h1>
+
+        <div class="invitation">
+            <img src="data:image/png;base64,{{ hero_2.image }}" alt="profile-picture" style="height: 80px; width: 80px">
+            <p><strong>Challenger:</strong>{{ hero_2.alias }}</p>
+            <p><strong>rank:</strong>{{ hero_2.rank }}</p>
+            <p><strong>ELO:</strong>{{ hero_2.eol }}</p>
+            <div class="stats">
+                <form action="{{ url_for('fight') }}" method="post">
+                    <input type="hidden" name="hero1_id" value="{{ hero_1.id }}">
+                    <input type="hidden" name="hero2_id" value="{{ hero_2.id }}">
+                    <button type="submit" class="accept">Accept</button>
+                </form>
+                <form action="{{ url_for('leaderboard') }}">
+                    <button type="submit" class="decline">Decline</button>
+                </form>
+            </div>
+        </div>
+
+        <div class="rules">
+            <h2><strong>Duel Participation Rules</strong></h2>
+            <p>the maximum duels you can do per week is 3</p>
+            <p>your elo cant have an difference of 300 from your opponents</p>
+            <p>1. Rating-Based Categories: Group participants into skill-based categories using their Elo ratings to
+                ensure fair matchups. </p>
+            <p>2. Balanced Pairings: Use an algorithm to pair participants with opponents of similar Elo ratings to
+                maintain competitive balance.</p>
+            <p>3. Transparent Scoring and Prizes: Implement a transparent scoring system and prize structure based on
+                tournament performance and participation, ensuring fairness and clarity for all participants.</p>
+            <p>4. Every match will be watched over by an admin for fairplay and no cheating.</p>
+            <p>5. You need to have passed your probation period of 1 month.</p>
+        </div>
+    </div>
+</body>
+
+</html>

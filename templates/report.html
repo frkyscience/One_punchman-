@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Report Form</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/report.css') }}">
+    <script src="{{ url_for('static', filename='js/report.js') }}" defer></script>
+</head>
+<body>
+
+    <div class="form-container">
+        <form id="reportForm">
+            <label for="issue">Describe the issue:</label><br>
+            <textarea id="issue" name="issue" rows="4" cols="50"></textarea><br><br>
+            <button type="submit">Send</button>
+        </form>
+    </div>
+
+    <div id="popupMessage" class="popup">
+        <p>Thank you for the report
+            we will look into it !
+        </p>
+    </div>
+
+
+</body>
+</html>
+

@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Achievement Page</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/achievement.css') }}">
+</head>
+<body>
+    <div class="side-bar">
+        <div class="app-navbar">
+            <div class="app-body-navigation">
+                <nav>
+                    <ul class="menu">
+                        <li><a href="/">Home</a></li>
+                        <li><a href="#!">Contact us</a></li>
+                        <li><a href="#!">Lore</a></li>
+                        <li><a href="#!">Awards</a></li>
+                        <li><a href="#!">Sign in</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="main-content">
+            <h1>Achievements</h1>
+            <div class="achievement-container">
+
+                <div class="achievement">
+                    <h2>The Slayer</h2>
+                    <p><strong>slay 1000 monsters.</strong></p>
+                    <p>monsters slayed: <span id="codeLines">1000</span></p>
+                    <progress id="codeProgress" value="100" max="100">100%</progress>
+                </div>
+                <div class="achievement">
+                    <h2>SOS</h2>
+                    <p><strong>Save 50 people in danger</strong></p>
+                    <p>people saved: <span id="countriesVisited">48</span></p>
+                    <progress id="countriesProgress" value="48" max="50">98%</progress>
+                </div>
+                <div class="achievement">
+                    <h2>Watchmen</h2>
+                    <p><strong>Patrol the city 20 times.</strong></p>
+                    <p>patrols: <span id="countriesVisited">20</span></p>
+                    <progress id="countriesProgress" value="20" max="20">100%</progress>
+                </div>
+                <div class="achievement">
+                    <h2>Gladiator</h2>
+                    <p><strong>Defeat 15 enemies in a row in the arena.</strong></p>
+                    <p>enemies defeated: <span id="countriesVisited">11</span></p>
+                    <progress id="countriesProgress" value="11" max="15">80%</progress>
+                </div>
+                <div class="achievement">
+                    <h2>raid master</h2>
+                    <p><strong>complete 10 raids.</strong></p>
+                    <p>raids completed: <span id="countriesVisited">2</span></p>
+                    <progress id="countriesProgress" value="2" max="10">20%</progress>
+                </div>
+                <div class="achievement">
+                    <h2>crit master</h2>
+                    <p><strong>Deliver 200 criticals attacks on enemies.</strong></p>
+                    <p>totale crits: <span id="countriesVisited">134</span></p>
+                    <progress id="countriesProgress" value="134" max="200">68%</progress>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="awards-container">
+        <h1>Awards</h1>
+        <p>Complete achievemts to be awarded with a title.</p>
+        <div class="awards-content">
+            <div class="award">
+                <h2>Watchmen</h2>
+                <p><strong>Patrol the city 20 times.</strong></p>
+            </div>
+            <div class="award">
+                <h2>The Slayer</h2>
+                <p><strong>Slay 1000 monsters.</strong></p>
+            </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>

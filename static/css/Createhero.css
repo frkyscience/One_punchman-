@@ -1,0 +1,141 @@
+
+body {
+ background-image: url("https://4kwallpapers.com/images/walls/thumbs_3t/10118.jpg ");
+  background-size: cover;
+}
+
+/* glass navbar */
+.app-navbar {
+    border: 1px solid rgba(0, 0, 0, 0.25);
+    border-radius: 40px;
+    box-shadow: 0 0 10px 1px rgba(0, 0, 0, 0.25);
+    position: fixed;
+    top: 15px;
+    width: 95%;
+    padding-top: 20px;
+    background-color: rgba(0, 0, 0, 0.2);
+    transition: 0.3s ease;
+    backdrop-filter: blur(30px);
+  margin-left: 35px;
+  }
+
+  /* dit is de navbar animatie */
+  .menu {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 ;
+    height: 7vh;
+    padding: 0px;
+    list-style: none;
+  }
+
+  .menu li {
+    width: 125px;
+    height: 50px;
+    transition: 0.9s linear;
+    text-align: center;
+
+    a {
+      font-size: 22px;
+      color: #ffffff;
+      text-decoration: none;
+      transition: all 0.45s;
+    }
+
+    &:hover {
+      background: url("data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4KPHN2ZyB2ZXJzaW9uPSIxLjEi%0D%0AIGlkPSJMYXllcl8xIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhs%0D%0AaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiB4PSIwcHgiIHk9IjBweCIKCSB3aWR0%0D%0AaD0iMzkwcHgiIGhlaWdodD0iNTBweCIgdmlld0JveD0iMCAwIDM5MCA1MCIgZW5hYmxlLWJhY2tn%0D%0Acm91bmQ9Im5ldyAwIDAgMzkwIDUwIiB4bWw6c3BhY2U9InByZXNlcnZlIj4KPHBhdGggZmlsbD0i%0D%0Abm9uZSIgc3Ryb2tlPSIjZDk0ZjVjIiBzdHJva2Utd2lkdGg9IjEuNSIgc3Ryb2tlLW1pdGVybGlt%0D%0AaXQ9IjEwIiBkPSJNMCw0Ny41ODVjMCwwLDk3LjUsMCwxMzAsMAoJYzEzLjc1LDAsMjguNzQtMzgu%0D%0ANzc4LDQ2LjE2OC0xOS40MTZDMTkyLjY2OSw0Ni41LDI0My42MDMsNDcuNTg1LDI2MCw0Ny41ODVj%0D%0AMzEuODIxLDAsMTMwLDAsMTMwLDAiLz4KPC9zdmc+Cg==");
+      animation: line 1s;
+    }
+
+    &:hover a {
+      color: #d94f5c;
+    }
+
+    &:not(:last-child) {
+      margin-right: 30px;
+    }
+  }
+
+  @keyframes line {
+    0% {
+      background-position-x: 390px;
+    }
+  }
+
+.login {
+  align-items: center;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  padding: 10px;
+  margin-top: 160px;
+  width: 100%;
+  height: 100%;
+}
+
+.login form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: rgba(42, 41, 41, 0.8);
+  color: white;
+  border-collapse: collapse;
+  border-radius: 10px;
+  margin: 10px;
+  padding: 10px;
+  box-shadow: 0 0 20px rgba(255, 255, 255, 0.2);
+
+}
+
+.login label,
+.login input,
+.login textarea,
+.login button {
+  margin-bottom: 10px;
+  border-radius: 10px;
+}
+
+button {
+  border: none;
+  transition-duration: 0.5s;
+  background: rgba(134, 148, 141, 0.45);
+  cursor: pointer;
+  color: white;
+}
+
+button:hover {
+  color: rgb(255, 255, 255);
+  background-color: rgb(159, 1, 1);
+}
+
+.Terms-container {
+  width: 100%;
+  height: 100%;
+  box-shadow: 0 0 20px rgba(255, 255, 255, 0.515);
+  background: rgba(134, 148, 141, 0.45);
+  border-radius: 10px;
+  color: white;
+}
+
+.content-wrap {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+}
+
+.exceed-max-words {
+  background-color: red;
+}
+
+
+.login textarea {
+  resize: vertical
+}
+
+.login span {
+
+  display: block;
+
+}

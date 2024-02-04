@@ -1,0 +1,109 @@
+body {
+    margin: 0;
+    padding: 0;
+    align-items: center;
+    background: linear-gradient(87deg, rgba(233, 229, 23, 0.584) 0%, rgba(191, 47, 47, 0.763) 100%);
+}
+
+.loading-screen {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.8);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+}
+
+.title {
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.wrapper {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.wrapper div p {
+    font-weight: 600;
+}
+
+.winner {
+    height: 500px;
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: rgba(97, 93, 93, 0.303);
+    border-radius: 5px;
+    backdrop-filter: blur(12.8px);
+    -webkit-backdrop-filter: blur(12.8px);
+    border: 30px solid;
+    border-color: rgb(79, 79, 79);
+    clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
+    box-shadow: 5px 10px 20px rgb(59, 59, 59) inset;
+}
+
+
+
+.loser {
+    height: 500px;
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: rgba(97, 93, 93, 0.303);
+    border-radius: 5px;
+    backdrop-filter: blur(12.8px);
+    -webkit-backdrop-filter: blur(12.8px);
+    border: 30px solid;
+    border-color: rgb(79, 79, 79);
+    clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
+    box-shadow: 5px 10px 20px rgb(59, 59, 59) inset;
+}
+
+.winner img {
+    height: 200px;
+    border-radius: 70px;
+    box-shadow: 2px 2px 5px rgb(0, 63, 0);
+
+}
+
+.loser img {
+    border-radius: 70px;
+    height: 200px;
+    box-shadow: 2px 2px 5px rgb(133, 0, 0);
+}
+
+.winner .winnerelo {
+    display: flex;
+    background-color: rgba(6, 47, 13, 0.379);
+    text-shadow: 2px 2px 5px green;
+    width: 50px;
+    text-align: center;
+    color: rgb(0, 0, 0);
+    border-radius: 7px;
+    box-shadow: 2px 2px 5px rgb(0, 63, 0);
+
+}
+
+.loser .loserelo {
+    display: flex;
+    background-color: rgba(87, 14, 14, 0.399);
+    border-radius: 7px;
+    width: 50px;
+    text-align: center;
+    text-shadow: 2px 2px 5px red;
+    color: rgb(0, 0, 0);
+    box-shadow: 2px 2px 5px rgb(133, 0, 0);
+
+}
